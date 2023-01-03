@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Fibonacci</h1>
+    <label for="fibo">Enter the legnth of fibo:</label>
+    <input type="number" name="fibo" id="fibo" />
+    <br />
+    <br />
+    <button onclick="print()">Print</button>
+    <div id="show"></div>
+    <script>
+      function print() {
+        let a = 1,
+          b = 1,
+          c,
+          i = 3,
+          length = document.getElementById("fibo").value
+        document.write(a + "<br />")
+        document.write(b + "<br />")
+        while (i <= length) {
+          c = a + b
+          document.write(c + "<br />")
+          a = b
+          b = c
+          i++
+        }
+      }
+    </script>
+  </body>
+</html>
